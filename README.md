@@ -1,11 +1,12 @@
-fpl-wrapped-slides/
-├── package.json
-├── README.md
-├── src/
-│   ├── components/
-│   │   └── WrappedSlide.tsx
-│   └── lib/
-│       └── useExport.ts{
+git clone https://github.com/denyerts/fpl-wrapped-slides.git
+cd fpl-wrapped-slides
+
+# Create folders
+mkdir -p src/components src/lib src/pages
+
+# package.json
+cat > package.json <<'EOF'
+{
   "name": "fpl-wrapped-slides",
   "version": "1.0.0",
   "main": "index.js",
@@ -23,24 +24,23 @@ fpl-wrapped-slides/
     "react-dom": "^18.2.0",
     "next": "13.5.0"
   }
-}# FPL Wrapped Slides 🎉
+}
+EOF
+
+# README
+cat > README.md <<'EOF'
+# FPL Wrapped Slides 🎉
 
 Spotify Wrapped–style slides for Fantasy Premier League recaps.  
 Designed to drop into **Lovable** or any Next.js project.
 
----
-
 ## 🚀 Features
 - Animated slides (Framer Motion)
+- Export slides as PNG images
 - Branded gradients
-- Export each slide as a PNG image
-- Built for shareability (Instagram/Twitter/WhatsApp)
-
----
+- Demo League Report page
 
 ## 🛠 Setup
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/denyerts/fpl-wrapped-slides.git
-   cd fpl-wrapped-slides
-   npm installnpm run dev
+```bash
+npm install
+npm run dev
